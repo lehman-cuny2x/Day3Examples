@@ -199,6 +199,11 @@ document.getElementById("myForm").addEventListener("submit", function(event){
    password = password.trim();
    confirmPassword = confirmPassword.trim();
 
+   /*
+   This code is doing the following.
+
+   13) Remove the div with a class of footer.
+   */
   if(password !== confirmPassword){
     document.getElementById("password").style.border = "thick solid red";
     document.getElementById("confirmPassword").style.border = "thick solid red";
