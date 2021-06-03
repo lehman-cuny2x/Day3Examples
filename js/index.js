@@ -160,3 +160,70 @@ document.getElementById("myFriend").addEventListener("click", function(){
 function test1(name1){
     alert("today" + name1);
 }
+
+
+/*
+
+
+
+Breat until 2:00 PM
+
+
+*/
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+
+    /* We want to get a value that been entered by a user in the form
+    
+
+
+    */
+   // The following line gets a value from the input field
+   let username = document.getElementById("username").value;
+   //console.log(username.length);
+   //username = username.trim();
+
+   if(username == "" || username.length == 0){
+       
+       document.getElementById("username").style.border = "think solid red";
+       alert("Please enter a valid username");
+   }
+   else{
+    document.getElementById("username").style.backgroundColor = "white";
+   }
+
+
+   let confirmPassword = document.getElementById("confirmPassword").value;
+   let password = document.getElementById("password").value;
+
+   password = password.trim();
+   confirmPassword = confirmPassword.trim();
+
+  if(password !== confirmPassword){
+    document.getElementById("password").style.border = "thick solid red";
+    document.getElementById("confirmPassword").style.border = "thick solid red";
+    alert("The password you entered do not match"); 
+  }else{
+    document.getElementById("password").style.border = "1px solid grey";
+    document.getElementById("confirmPassword").style.border = "1px solid grey";
+  }
+
+
+
+  let formTitle = document.getElementById("title");
+
+  formTitle.innerText = formTitle.innerText + " CMP 1000";
+  console.log(formTitle.innerText);
+
+
+  let newDiv = document.getElementById("newDiv");
+
+  newDiv.innerText = newDiv.innerHTML + " CMP 1000";
+  console.log(newDiv.innerText);
+
+   //console.log(username.length);
+   //alert(username);
+    
+
+    event.preventDefault();
+});
